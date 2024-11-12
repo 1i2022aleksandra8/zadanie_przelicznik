@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przelicznik jednostek</title>
+</head>
+<body>
+    <script>
+        const liczba = prompt("Podaj liczbę do przeliczenia:");
+        const współczynnik = prompt("Podaj współczynnik konwersji");
+        const jednostka = prompt("Podaj jednostkę początkową, czyli km lub mi");
+        if (isNaN(liczba) ||  isNaN(współczynnik)) {
+            document.write("Proszę wpisać prawidłowe liczby.");
+        } else if (jednostka == "km" || jednostka == "mi") {
+            const wynik = liczba * współczynnik;
+            document.write(`${liczba} ${jednostka} to ${wynik} w przeliczonej jednostce.`);
+        } else {
+            document.write("Proszę wpisać prawidłową jednostkę - 'km' lub 'mi.");
+        }
+    </script>
+</body>
+</html>
