@@ -12,9 +12,12 @@
         const jednostka = prompt("Podaj jednostkę początkową, czyli km lub mi");
         if (isNaN(liczba) ||  isNaN(współczynnik)) {
             document.write("Proszę wpisać prawidłowe liczby.");
-        } else if (jednostka == "km" || jednostka == "mi") {
+        } else if (jednostka === "km") {
             const wynik = liczba * współczynnik;
-            document.write(`${liczba} ${jednostka} to ${wynik} w przeliczonej jednostce.`);
+            document.write(`${liczba} kilometrów (km) to ${wynik} mil (mi) przy użyciu współczynnika ${współczynnik}.`);
+        } else if (jednostka === "mi") {
+            const wynik = liczba * współczynnik;
+            document.write(`${liczba} mil (mi) to ${wynik} kilometrów (km) przy użyciu współczynnika ${współczynnik}.`);
         } else {
             document.write("Proszę wpisać prawidłową jednostkę - 'km' lub 'mi.");
         }
